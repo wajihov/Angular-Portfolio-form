@@ -1,0 +1,37 @@
+.sidenav {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.sidenav {
+  height: auto;
+  min-height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #bd5d38 !important;
+  overflow-x: hidden;
+  padding-top: 75px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 100%;
+  color: white;
+  display: block;
+}
+
+.openBtn {
+  background-color: #bd5d38 !important;
+  color: rgb(231, 228, 225);
+  border: 2px solid #bd5d38 !important;
+  top: 0;
+  left: 0;
+  position: fixed;
+}
+
+.dropdown-item {
+  background-color: #bd5d38 !important;
+  color: white;
+}

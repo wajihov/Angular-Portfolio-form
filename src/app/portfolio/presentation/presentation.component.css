@@ -1,0 +1,24 @@
+.nameFormation, .titrePhrase, .content-interet {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.nameFormation {
+  color: #38bd5d;
+  margin-top: 80px;
+  margin-left: 30px;
+  text-align: center;
+}
+
+.titrePhrase {
+  color: #bd5d38!important;
+  text-align: center;
+  font-weight: bold;
+}
+
+.content-interet {
+  font-size: 16px;
+  color: black;
+  text-align: justify;
+  font-weight: normal;
+  margin: 40px;
+}

@@ -1,0 +1,53 @@
+/* @import "~font-awesome/css/font-awesome.css";
+.nameFormation, .titrePhrase, .content-skills, .cell1, .cell2, .cell3, .cell4 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+} */
+
+.nameFormation {
+  color: #38bd5d;
+  margin-top: 80px;
+  margin-left: 30px;
+  text-align: center;
+}
+
+.titrePhrase {
+  color: #bd5d38 !important;
+  text-align: center;
+  font-weight: bold;
+}
+
+.content-skills {
+  font-size: 48px;
+  text-align: center;
+}
+
+.tableService {
+  padding-left: 25px;
+  padding-top: 35px;
+}
+
+.fa-angular:hover, .fa-html5:hover, .fa-css3-alt:hover, .fa-js-square:hover, .fa-npm:hover, .fa-java:hover {
+  color: #bd5d38 !important;
+  cursor: pointer;
+}
+
+.cell1 {
+  border: 1px solid black;
+  padding: 4px;
+}
+
+.cell2 {
+  font-size: 14px;
+  padding-top: 18px;
+}
+
+.cell3 {
+  font-size: 14px;
+  padding: 20px;
+  text-align: justify;
+}
+
+.cell4 {
+  font-size: 35px;
+  text-align: center;
+}

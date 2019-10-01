@@ -1,0 +1,101 @@
+/* @import '~material-icons/iconfont/material-icons.css'; */
+@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
+
+.nameFormation, .titrePhrase, .resumeTitle, .defineDate, .defineObjective, .cirleDate, .block-job {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.nameFormation {
+  color: #38bd5d;
+  margin-top: 80px;
+  margin-left: 30px;
+  text-align: center;
+}
+
+.titrePhrase {
+  color: #bd5d38 !important;
+  text-align: center;
+  font-weight: bold;
+}
+
+.resumeTitle {
+  background: #5d38bd;
+  color: white;
+  margin-left: 15px;
+  border-radius: 10px;
+  font-size: 85%;
+  padding-top: 15px;
+}
+
+.v1 {
+  border-left: 1px solid #5d38bd;
+  height: 95px;
+  z-index: -1;
+  position: absolute;
+  top: 100px;
+  left: 38px;
+}
+
+.v2 {
+  border-left: 1px solid #5d38bd;
+  height: 92px;
+  z-index: -1;
+  position: absolute;
+  top: 208px;
+  left: 38px;
+}
+
+.v3 {
+  border-left: 1px solid #5d38bd;
+  height: 80px;
+  z-index: -1;
+  position: absolute;
+  top: 314px;
+  left: 38px;
+}
+
+.v4 {
+  border-left: 1px solid #5d38bd;
+  height: 28%;
+  /* calc(100% - 52px) */
+  z-index: -1;
+  position: absolute;
+  top: 100px;
+  left: 39px;
+}
+
+.v5 {
+  border-left: 1px solid #5d38bd;
+  height: 54%;
+  z-index: -1;
+  position: absolute;
+  top: 320px;
+  left: 39px;
+}
+
+.defineDate {
+  font-size: 20px;
+  color: #bd5d38;
+  padding-left: 10px;
+  margin-top: 9px;
+}
+
+.defineObjective {
+  font-size: 15px;
+  color: #5d38bd;
+  padding-left: 10px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.cirleDate {
+  color: chocolate;
+  font-size: 15px;
+  margin-left: 17px;
+}
+
+.block-job {
+  color: black;
+  text-align: justify;
+  font-weight: normal;
+}
