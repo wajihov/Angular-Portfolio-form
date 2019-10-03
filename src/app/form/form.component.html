@@ -1,0 +1,117 @@
+<div class="container" style="padding-top: 20px">
+
+    <h1>CONTACT ME</h1>
+
+    <div class="row">
+        <div class="col-md-6">
+            <section id="form">
+                <!-- <div class="row">
+                        <div class="col-1">
+                        </div>
+                        <div class="col-11 nameFormation"> -->
+                <!-- <h1 class="titrePhrase">CONTACT ME</h1> -->
+                <!-- <h2>VOTRE INFORMATION</h2>
+                            <h3>MON ESPACE DE CONTACT</h3> -->
+                <!-- </div>
+                    </div> -->
+                <form [formGroup]="formUser">
+                    <div class="form-group">
+                        <label for="exampleInputNom">Nom</label>
+                        <input class="form-control" type="text" placeholder="Votre Nom" formControlName="nom" />
+
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPrenom">Prénom</label>
+                        <input class="form-control" type="text" placeholder="Votre Prenom" formControlName="prenom" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputDateNaissance">Date Naissance</label>
+                        <input type="date" class="form-control" formControlName="dateNaissance">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputCmtre">Comentaire</label>
+                        <textarea class="form-control" rows="3" formControlName="commentaire"></textarea>
+                    </div>
+                </form>
+
+                <button type="button" (click)="submitForm()" class="btn btn-outline-primary btn-block"
+                    style="border: 2px solid blue">Envoyer</button>
+                <button type="reset" (click)="resetForm()" class="btn btn-outline-danger btn-block"
+                    style="border: 2px solid red">Annuler</button>
+
+                <div class="w-100 my-2">
+                    <hr>
+                </div>
+            </section>
+        </div>
+        <div class="col-md-6">
+
+            <table class="table table-responsive">
+                <tr>
+                    <th>Nom</th>
+                    <th>Prenom</th>
+                    <th>Date Naissance</th>
+                    <th>Commentaire</th>
+                </tr>
+
+                <tr *ngFor="let item of users; index as i ">
+
+                    <td>{{ item.nom }}</td>
+                    <td>{{ item.prenom }} </td>
+                    <td>{{ item.dateNaissance }} </td>
+                    <td>{{ item.commentaire }}</td>
+                    <td><button type="button" (click)=removeItem(i)><i class="fa fa-trash"></i>
+                        </button></td>
+
+                    <td><button type="button" (click)=editItem(item,i) data-toggle="modal"
+                            data-target="#exampleModal"><i class="fa fa-edit"></i></button></td>
+                </tr>
+
+            </table>
+            <!-- {{this.formUser.value.nom}}
+                    {{this.formUser.value.prenom}}
+                    {{this.formUser.value.dateNaissance}}
+                    {{this.formUser.value.commentaire}} -->
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="formUserModif">
+                    <div class="form-group">
+                        <label for="exampleInputNom">Nom</label>
+                        <input class="form-control" type="text" placeholder="Votre Nom" formControlName="nom" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPrenom">Prénom</label>
+                        <input class="form-control" type="text" placeholder="Votre Prenom" formControlName="prenom" />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputDateNaissance">Date Naissance</label>
+                        <input type="date" class="form-control" formControlName="dateNaissance">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputCmtre">Comentaire</label>
+                        <textarea class="form-control" rows="3" formControlName="commentaire"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                <button type="button" (click)="updateItem()" class="btn btn-primary" 
+                data-dismiss="modal">Update</button>
+            </div>
+        </div>
+    </div>
+</div>
