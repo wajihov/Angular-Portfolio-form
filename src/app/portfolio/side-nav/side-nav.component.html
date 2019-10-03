@@ -1,26 +1,24 @@
 <div class="dropdown">
-  <button class="openBtn dropdown-toggle d-xs-none" data-toggle="dropdown">☰<span
-    class="caret"></span></button>
+  <button class="openBtn dropdown-toggle d-xs-none" data-toggle="dropdown">☰<span class="caret"></span></button>
   <ul class="dropdown-menu">
-    <li><a href="#about" class="dropdown-item">Home</a></li>
-    <li><a href="#presentation" class="dropdown-item">Présentation</a></li>
-    <li><a href="#experience" class="dropdown-item">Experience</a></li>
-    <li><a href="#competance" class="dropdown-item">Competance</a></li>
-    <li><a href="#certification" class="dropdown-item">Certification</a></li>
-    <li><a href="#interet" class="dropdown-item">Interest</a></li>
-    <li><a href="#form" class="dropdown-item">Contact</a></li>
+    <li><a href="/portfolio/#about" class="dropdown-item">Home</a></li>
+    <li><a href="/portfolio/#presentation" class="dropdown-item">Présentation</a></li>
+    <li><a href="/portfolio/#experience" class="dropdown-item">Experience</a></li>
+    <li><a href="/portfolio/#competance" class="dropdown-item">Competance</a></li>
+    <li><a href="/portfolio/#certification" class="dropdown-item">Certification</a></li>
+    <li><a href="/portfolio/#interet" class="dropdown-item">Interest</a></li>
   </ul>
 </div>
 
 <div class="col-2 sidenav d-none d-md-block" id="btnActive">
-  <a href="#about">
+  <a href="/portfolio/#about">
     <img src="assets/image/image.png" alt="" width="150" height="150"
-         class="img-fluid rounded-circle shadow-lg p-2 mb-2 bg-gray "></a>
-  <a href="#about" class="btn active" id="idAbout">Home</a>
-  <a href="#presentation" class="btn">Présentation</a>
-  <a href="#experience" class="btn">Experience</a>
-  <a href="#competance" class="btn">Competance</a>
-  <a href="#certification" class="btn">Certification</a>
-  <a href="#interet" class="btn">Interest</a>
-  <a href="#form" class="btn">Contact</a>
+      class="img-fluid rounded-circle shadow-lg p-2 mb-2 bg-gray "></a>
+  <!-- <a href="/portfolio/#about" class="btn active" id="idAbout">Home</a> -->
+  <a routerlink="about" class="btn active" id="idAbout">Home</a>
+  <a href="/portfolio/#presentation" class="btn">Présentation</a>
+  <a href="/portfolio/#experience" class="btn">Experience</a>
+  <a href="/portfolio/#competance" class="btn">Competance</a>
+  <a href="/portfolio/#certification" class="btn">Certification</a>
+  <a routerlink="interet" class="btn">Interest</a>
 </div>
