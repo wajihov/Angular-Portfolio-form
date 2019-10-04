@@ -1,0 +1,25 @@
+<div class="container" style="padding-top: 60px">
+    <table class="table table-responsive">
+        <tr>
+            <th>Nom</th>
+            <th>Prenom</th>
+            <th>Date Naissance</th>
+            <th>Commentaire</th>
+        </tr>
+        <tr *ngFor="let item of users; index as i ">
+
+            <td>{{ item.nom }}</td>
+            <td>{{ item.prenom }} </td>
+            <td>{{ item.dateNaissance }} </td>
+            <td>{{ item.commentaire }}</td>
+            <td><button type="button" (click)=removeItem(i)><i class="fa fa-trash"></i>
+                </button></td>
+            <td><button type="button" (click)=editItem(item,i) data-toggle="modal" data-target="#exampleModal"><i
+                        class="fa fa-edit"></i></button></td>
+        </tr>
+    </table>
+    <!-- {{this.formUser.value.nom}}
+    {{this.formUser.value.prenom}}
+    {{this.formUser.value.dateNaissance}}
+    {{this.formUser.value.commentaire}} -->
+</div>

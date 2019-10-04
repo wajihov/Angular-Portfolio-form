@@ -18,34 +18,28 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { MyModelModernComponent } from './portfolio/my-model-modern/my-model-modern.component';
 import { NavbarApplicationComponent } from './navbar-application/navbar-application.component';
-import { Routes, RouterModule } from "@angular/router"
+// import { Routes, RouterModule } from "@angular/router";
+import { FormContactComponent } from './form-contact/form-contact.component';
+import { FormulaireComponent } from './Form-contact/formulaire/formulaire.component';
+import { ListContactComponent } from './Form-contact/list-contact/list-contact.component';
 
-const appRoutes: Routes = [
-  { path: '', component: FormComponent },
-  { path: 'contact', component: FormComponent },
-  { path: 'portfolio' , component: PortfolioComponent},
-  // {
-  //    path: 'portfolio', component: PortfolioComponent, children: [
-  //     { path: 'about', component: AboutComponent },
-  //     { path: 'presentation', component: PresentationComponent  },
-  //     { path: 'experience', component: ExperienceComponent },
-  //     { path: 'competance', component: CompetanceComponent },
-  //     { path: 'certification', component: CertificationComponent },
-  //     { path: 'interet', component: InteretComponent }
-  //   ]
-  // }
-  {
-    path: 'portfolio/', component: PortfolioComponent, children: [
-      { path: 'about', component: AboutComponent },
-      { path: 'presentation', component: PresentationComponent },
-      { path: 'experience', component: ExperienceComponent },
-      { path: 'competance', component: CompetanceComponent },
-      { path: 'certification', component: CertificationComponent },
-      { path: 'interet', loadChildren: './interet/interet.module#interet' }
-    ]
-  } 
+// const appRoutes: Routes = [
+//   { path: '', component: FormComponent },
+//   { path: 'contact', component: FormComponent },
+//   { path: 'portfolio', component: PortfolioComponent },
+//   {
+//     path: 'portfolio/', component: PortfolioComponent, children: [
+//       { path: 'about', component: AboutComponent },
+//       { path: 'presentation', component: PresentationComponent },
+//       { path: 'experience', component: ExperienceComponent },
+//       { path: 'competance', component: CompetanceComponent },
+//       { path: 'certification', component: CertificationComponent },
+//       { path: 'interet', component: InteretComponent }
+//     ]
+//   },
+//   { path: 'formulaire', component: FormComponent }
 
-]
+// ]
 
 @NgModule({
   declarations: [
@@ -62,8 +56,10 @@ const appRoutes: Routes = [
     FormComponent,
 
     MyModelModernComponent,
-
-    NavbarApplicationComponent
+    NavbarApplicationComponent,
+    FormContactComponent,
+    FormulaireComponent,
+    ListContactComponent,
   ],
   imports: [
     BrowserModule,
@@ -71,7 +67,7 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     FormsModule,
     NgbModule,
-    RouterModule.forRoot(appRoutes)
+    // RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
