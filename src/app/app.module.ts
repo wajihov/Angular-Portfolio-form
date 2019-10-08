@@ -22,6 +22,7 @@ import { NavbarApplicationComponent } from './navbar-application/navbar-applicat
 import { FormContactComponent } from './form-contact/form-contact.component';
 import { FormulaireComponent } from './Form-contact/formulaire/formulaire.component';
 import { ListContactComponent } from './Form-contact/list-contact/list-contact.component';
+import { ModifContactComponent } from './form-contact/modif-contact/modif-contact.component';
 
 // const appRoutes: Routes = [
 //   { path: '', component: FormComponent },
@@ -60,6 +61,7 @@ import { ListContactComponent } from './Form-contact/list-contact/list-contact.c
     FormContactComponent,
     FormulaireComponent,
     ListContactComponent,
+    ModifContactComponent,
   ],
   imports: [
     BrowserModule,

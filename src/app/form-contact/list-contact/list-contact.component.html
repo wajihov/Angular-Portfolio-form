@@ -12,10 +12,12 @@
             <td>{{ item.prenom }} </td>
             <td>{{ item.dateNaissance }} </td>
             <td>{{ item.commentaire }}</td>
-            <td><button type="button" (click)=removeItem(i)><i class="fa fa-trash"></i>
+            <td><a [routerLink]="['../modif',i]">Détail</a> </td>
+            <td><a routterLink="/formulaire/contactForm" (click)=removeItem(i)>Supprimer</a> </td>
+            <!-- <td><button type="button" (click)=removeItem(i)></i>
                 </button></td>
             <td><button type="button" (click)=editItem(item,i) data-toggle="modal" data-target="#exampleModal"><i
-                        class="fa fa-edit"></i></button></td>
+                        class="fa fa-edit"></i></button></td> -->
         </tr>
     </table>
     <!-- {{this.formUser.value.nom}}

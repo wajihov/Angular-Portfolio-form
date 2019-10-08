@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { AppService } from 'src/app/service/app.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-list-contact',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list-contact.component.css']
 })
 export class ListContactComponent implements OnInit {
+  users: any = [];
 
-  constructor() { }
+  constructor(private appService: AppService, private route: Router) { }
 
   ngOnInit() {
+    this.users = this.appService.users;
+  }
+  removeItem(i) {
+    this.appService.deletePerson(i);
   }
 
 }
