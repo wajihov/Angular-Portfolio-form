@@ -23,6 +23,8 @@ import { FormContactComponent } from './form-contact/form-contact.component';
 import { FormulaireComponent } from './Form-contact/formulaire/formulaire.component';
 import { ListContactComponent } from './Form-contact/list-contact/list-contact.component';
 import { ModifContactComponent } from './form-contact/modif-contact/modif-contact.component';
+import { LoginComponent } from './login/login.component';
+import { SpecialEventsComponentComponent } from './special-events-component/special-events-component.component';
 
 // const appRoutes: Routes = [
 //   { path: '', component: FormComponent },
@@ -62,6 +64,8 @@ import { ModifContactComponent } from './form-contact/modif-contact/modif-contac
     FormulaireComponent,
     ListContactComponent,
     ModifContactComponent,
+    LoginComponent,
+    SpecialEventsComponentComponent,
   ],
   imports: [
     BrowserModule,

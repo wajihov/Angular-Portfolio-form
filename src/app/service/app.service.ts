@@ -1,12 +1,10 @@
 import { Injectable } from '@angular/core';
-import { Utilisateur } from '../utilisateur';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AppService {
-  users = [];
-  utilisateur: any;
+  users = [];  
   constructor() { }
 
   addPerson(block: any) {
@@ -21,5 +19,9 @@ export class AppService {
 
   modifPerson(block: any, i: number) {
     this.users[i] = block;
+  }
+
+  loggedIn() {
+    return !!localStorage.getItem('token');
   }
 }
