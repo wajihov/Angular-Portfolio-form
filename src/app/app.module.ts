@@ -27,6 +27,7 @@ import { LoginComponent } from './login/login.component';
 import { SpecialEventsComponentComponent } from './special-events-component/special-events-component.component';
 import { RegisterComponent } from './register/register.component';
 import { SearchPipe } from './pipe/search.pipe';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 
 // const appRoutes: Routes = [
 //   { path: '', component: FormComponent },
@@ -70,6 +71,7 @@ import { SearchPipe } from './pipe/search.pipe';
     SpecialEventsComponentComponent,
     RegisterComponent,
     SearchPipe,
+    
   ],
   imports: [
     BrowserModule,
@@ -78,6 +80,7 @@ import { SearchPipe } from './pipe/search.pipe';
     FormsModule,
     NgbModule,
     // RouterModule.forRoot(appRoutes)
+    CKEditorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

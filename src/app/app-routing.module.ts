@@ -11,6 +11,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 
 
+
 const routes: Routes = [
   { path: '', component: FormComponent, canActivate: [AuthGuard] },
   { path: 'contact', component: FormComponent, canActivate: [AuthGuard] },

@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { AppService } from 'src/app/service/app.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
+import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 @Component({
   selector: 'app-list-contact',
@@ -8,6 +9,8 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./list-contact.component.css']
 })
 export class ListContactComponent implements OnInit {
+
+  public Editor = ClassicEditor;
   users: any = [];
   searchTerm: string;
 
