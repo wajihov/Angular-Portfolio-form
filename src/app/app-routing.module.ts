@@ -7,9 +7,9 @@ import { FormulaireComponent } from './Form-contact/formulaire/formulaire.compon
 import { ListContactComponent } from './Form-contact/list-contact/list-contact.component';
 import { ModifContactComponent } from './form-contact/modif-contact/modif-contact.component';
 import { AuthGuard } from './ngApp/auth.guard';
-import { AppService } from './service/app.service';
 import { LoginComponent } from './login/login.component';
-import { SpecialEventsComponentComponent } from './special-events-component/special-events-component.component';
+import { RegisterComponent } from './register/register.component';
+
 
 const routes: Routes = [
   { path: '', component: FormComponent, canActivate: [AuthGuard] },
@@ -24,6 +24,7 @@ const routes: Routes = [
     ]
   },
   { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent }
   // { path: 'special', component: SpecialEventsComponentComponent, canActivate: [AuthGuard] }
 ];
 

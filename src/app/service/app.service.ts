@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class AppService {
-  users = [];  
+  users = [];
   constructor() { }
 
   addPerson(block: any) {
@@ -22,6 +22,36 @@ export class AppService {
   }
 
   loggedIn() {
-    return !!localStorage.getItem('token');
+    return !!localStorage.getItem('Authentif');
+  }
+
+
+  addRegisterLocalStorage(block: any) {
+    let listRegister = JSON.parse(localStorage.getItem("Register"));
+    if (listRegister == null) {
+      listRegister = [];
+    }
+    listRegister.push(block);
+    localStorage.setItem("Register", JSON.stringify(listRegister));
+  }
+
+  addAuthentication(mail: string, motDePasse: string) {
+    let listRegister = JSON.parse(localStorage.getItem("Register"));
+    let auth: any = null;
+    if (listRegister != null) {
+      for (let i = 0; i < listRegister.length; i++) {
+        if (listRegister[i].email == mail && listRegister[i].password == motDePasse) {
+          auth = listRegister[i];
+          break;
+        }
+      }
+      if (auth == null) {
+        alert("Erreur login Et/Ou password");
+      }
+      localStorage.setItem("Authentif", JSON.stringify(auth));
+    }
+    else {
+      alert("Il n'y a pas d'Enregistrement");
+    }
   }
 }

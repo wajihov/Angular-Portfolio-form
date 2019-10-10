@@ -25,6 +25,7 @@ import { ListContactComponent } from './Form-contact/list-contact/list-contact.c
 import { ModifContactComponent } from './form-contact/modif-contact/modif-contact.component';
 import { LoginComponent } from './login/login.component';
 import { SpecialEventsComponentComponent } from './special-events-component/special-events-component.component';
+import { RegisterComponent } from './register/register.component';
 
 // const appRoutes: Routes = [
 //   { path: '', component: FormComponent },
@@ -66,6 +67,7 @@ import { SpecialEventsComponentComponent } from './special-events-component/spec
     ModifContactComponent,
     LoginComponent,
     SpecialEventsComponentComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,

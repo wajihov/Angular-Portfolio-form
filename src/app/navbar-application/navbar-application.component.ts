@@ -12,4 +12,7 @@ export class NavbarApplicationComponent implements OnInit {
   ngOnInit() {
   }
 
+  disconnect() {
+    localStorage.removeItem("Authentif");
+  }
 }

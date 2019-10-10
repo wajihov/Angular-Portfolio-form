@@ -1,15 +1,16 @@
-<table>
-    <h1>Authentification</h1>
-    <tr>
-        <td>Login</td>
-        <td><input type="text" name="txtName"> </td>
-    </tr>
-    <tr>
-        <td>Password</td>
-        <td><input type="text" name="txtPw"></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td><input type="submit" value="Envoyer"></td>
-    </tr>
-</table>
+<h1>Authentification</h1>
+<div class="container">
+
+    <form [formGroup]="formAuth">
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email" formControlName="email">
+        </div>
+        <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="pwd" placeholder="Enter password"
+                formControlName="password">
+        </div>
+    </form>
+    <button type="button" (click)="connecter()" class="btn btn-outline-primary btn-block">Connecter</button>
+</div>
