@@ -26,6 +26,7 @@ import { ModifContactComponent } from './form-contact/modif-contact/modif-contac
 import { LoginComponent } from './login/login.component';
 import { SpecialEventsComponentComponent } from './special-events-component/special-events-component.component';
 import { RegisterComponent } from './register/register.component';
+import { SearchPipe } from './pipe/search.pipe';
 
 // const appRoutes: Routes = [
 //   { path: '', component: FormComponent },
@@ -68,6 +69,7 @@ import { RegisterComponent } from './register/register.component';
     LoginComponent,
     SpecialEventsComponentComponent,
     RegisterComponent,
+    SearchPipe,
   ],
   imports: [
     BrowserModule,

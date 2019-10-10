@@ -9,6 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class ListContactComponent implements OnInit {
   users: any = [];
+  searchTerm: string;
 
   constructor(private appService: AppService, private route: Router) { }
 
