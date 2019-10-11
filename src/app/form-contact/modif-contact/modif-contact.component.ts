@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService } from 'src/app/service/app.service';
 import { ActivatedRoute } from '@angular/router';
-import { FormGroup, FormControl, NgForm } from '@angular/forms'
+import { FormGroup, FormControl, NgForm } from '@angular/forms';
+import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 @Component({
   selector: 'app-modif-contact',
@@ -12,6 +13,7 @@ export class ModifContactComponent implements OnInit {
 
   formUser: FormGroup;
   index: number;
+  public Editor = ClassicEditor;
 
   constructor(private appService: AppService,
     private route: ActivatedRoute) { }

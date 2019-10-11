@@ -2,7 +2,6 @@
     <div class="form-group">
         <input type="text" class="form-control" placeholder="Search" style="width: 300px" [(ngModel)]="searchTerm" />
     </div>
-
     <table class="table table-responsive">
         <tr>
             <th>Nom</th>
@@ -15,10 +14,11 @@
             <td>{{ item.nom }}</td>
             <td>{{ item.prenom }} </td>
             <td>{{ item.dateNaissance }} </td>
+            <!-- <td>{{ item.commentaire }} </td> -->
             <td>
-                <ckeditor [editor]="Editor" data="<p>{{ item.commentaire }}</p>"></ckeditor>
+                <div [innerHTML]="str[i]"></div>
             </td>
-            <td><a [routerLink]="['../modif',i]">Détail</a> </td>
+            <td><a [routerLink]="['../modif',i]">Modifier</a> </td>
             <td><a routerLink="/formulaire/contactForm" (click)=removeItem(i)>Supprimer</a> </td>
             <!-- <td><button type="button" (click)=removeItem(i)></i>
                 </button></td>

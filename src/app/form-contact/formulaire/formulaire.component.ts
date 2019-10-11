@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { AppService } from 'src/app/service/app.service';
+import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 @Component({
   selector: 'app-formulaire',
@@ -10,6 +11,7 @@ import { AppService } from 'src/app/service/app.service';
 export class FormulaireComponent implements OnInit {
 
   formUser: FormGroup;
+  public Editor = ClassicEditor;
 
   constructor(private appService: AppService) { }
 

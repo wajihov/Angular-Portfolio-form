@@ -20,7 +20,9 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputCmtre">Comentaire</label>
-                        <textarea class="form-control" rows="3" formControlName="commentaire"></textarea>
+                        <ckeditor [editor]="Editor" [formControl]="this.formUser.controls['commentaire']"
+                            data="<p></p>">
+                        </ckeditor>
                     </div>
                 </form>
 
