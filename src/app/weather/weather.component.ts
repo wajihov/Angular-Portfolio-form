@@ -25,6 +25,7 @@ export class WeatherComponent implements OnInit {
     if (this.ville == null) {
       this.appService.getWeather("Paris");
     }
+    this.ville = this.appService.city;
   }
 
   // getCountry() {

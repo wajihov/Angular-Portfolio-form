@@ -8,6 +8,7 @@ export class AppService {
   users = [];
   apiWeatherUrl: string;
   weather: any;
+  city: string;
   constructor(private http: HttpClient) { }
 
   getWeather(ville: any) {
@@ -18,12 +19,12 @@ export class AppService {
     //   this.weather = data;
     //   console.log("server ",this.weather.current.temperature);
     // });
-    console.log("ville ", ville);
+    this.city = ville;
+    console.log("la ville est : ", this.city);
+    
     this.http.get("http://api.weatherstack.com/current?access_key=834616c5321fbc9be003f794a2702da5&query=" + ville)
       .subscribe(response => {
         this.weather = response;
-        console.log("dans subscribe", response);
-        console.log("Temperature ", this.weather);
       });
   }
 

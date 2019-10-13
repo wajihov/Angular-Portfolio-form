@@ -10,10 +10,10 @@
             </div>-->
         <div class="form-group">
             <label>Ville : </label>
-            <input type="text" placeholder="Votre ville" [(ngModel)]="ville" class="form-control">
+            <input type="text"  [(ngModel)]="ville" class="form-control">
+            <!-- {{this.appService.city}} -->
         </div>
-        <button type="button" (click)="getCountry()" class="btn btn-primary">Weather</button>
-        <button type="button" (click)="getWeather()" class="btn btn-primary">Submit</button>
+        <button type="button" (click)="getCountry()" class="btn btn-primary">Weather</button>        
     </div>
     <div>
         <div class="col-md-12">
@@ -39,7 +39,6 @@
                     <td>localtime : </td>
                     <td>{{this.appService.weather["location"]["localtime"]}}</td>
                 </tr>
-
             </table>
         </div>
     </div>
