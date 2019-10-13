@@ -9,6 +9,7 @@ import { ModifContactComponent } from './form-contact/modif-contact/modif-contac
 import { AuthGuard } from './ngApp/auth.guard';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { WeatherComponent } from './weather/weather.component';
 
 
 
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: '', component: FormComponent, canActivate: [AuthGuard] },
   { path: 'contact', component: FormComponent, canActivate: [AuthGuard] },
   { path: 'portfolio', component: PortfolioComponent, canActivate: [AuthGuard] },
+  { path: 'weather', component: WeatherComponent, canActivate: [AuthGuard] },
   {
     path: 'formulaire', component: FormContactComponent, canActivate: [AuthGuard], children: [
       { path: 'contactForm', component: FormulaireComponent },

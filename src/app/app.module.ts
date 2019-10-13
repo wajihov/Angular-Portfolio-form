@@ -28,7 +28,8 @@ import { SpecialEventsComponentComponent } from './special-events-component/spec
 import { RegisterComponent } from './register/register.component';
 import { SearchPipe } from './pipe/search.pipe';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
-
+import { WeatherComponent } from './weather/weather.component';
+import { HttpClientModule } from '@angular/common/http';
 // const appRoutes: Routes = [
 //   { path: '', component: FormComponent },
 //   { path: 'contact', component: FormComponent },
@@ -71,7 +72,8 @@ import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
     SpecialEventsComponentComponent,
     RegisterComponent,
     SearchPipe,
-    
+    WeatherComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -80,7 +82,9 @@ import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
     FormsModule,
     NgbModule,
     // RouterModule.forRoot(appRoutes)
-    CKEditorModule
+    CKEditorModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

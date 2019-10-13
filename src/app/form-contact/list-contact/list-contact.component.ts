@@ -21,12 +21,12 @@ export class ListContactComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.users = this.appService.users;    
-    for (let i = 0; i < this.users.length; i++) {      
-      this.str[i] = this.users[i].commentaire;      
+    this.users = this.appService.users;
+    for (let i = 0; i < this.users.length; i++) {
+      this.str[i] = this.users[i].commentaire;
     }
   }
-  
+
   removeItem(i) {
     this.appService.deletePerson(i);
   }

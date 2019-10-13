@@ -1,11 +1,31 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AppService {
   users = [];
-  constructor() { }
+  apiWeatherUrl: string;
+  weather: any;
+  constructor(private http: HttpClient) { }
+
+  getWeather(ville: any) {
+    // let url = "http://api.weatherstack.com/current?access_key=834616c5321fbc9be003f794a2702da5&query=" + ville["ville"];
+    // console.log(url);
+    // this.http.get(url).subscribe(data => {
+    //   console.log('Dans getweather : ', data["current"]["temperature"]);
+    //   this.weather = data;
+    //   console.log("server ",this.weather.current.temperature);
+    // });
+    console.log("ville ", ville);
+    this.http.get("http://api.weatherstack.com/current?access_key=834616c5321fbc9be003f794a2702da5&query=" + ville)
+      .subscribe(response => {
+        this.weather = response;
+        console.log("dans subscribe", response);
+        console.log("Temperature ", this.weather);
+      });
+  }
 
   addPerson(block: any) {
     this.users.push(block);
@@ -24,7 +44,6 @@ export class AppService {
   loggedIn() {
     return !!localStorage.getItem('Authentif');
   }
-
 
   addRegisterLocalStorage(block: any) {
     let listRegister = JSON.parse(localStorage.getItem("Register"));

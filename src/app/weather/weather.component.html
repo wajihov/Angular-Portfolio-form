@@ -1,0 +1,46 @@
+<div class="container" style="padding-top: 80px">
+    <div class="form-inline">
+        <!-- <form [formGroup]="formWeather">
+            <div class="form-group">
+                <label for="exampleInputNom">Ville : </label>
+                <input class="form-control" type="text" placeholder="Votre ville" formControlName="ville" />
+            </div>
+        </form>
+        <button type="button" (click)="getCountry()" class="btn btn-primary">Submit</button>
+            </div>-->
+        <div class="form-group">
+            <label>Ville : </label>
+            <input type="text" placeholder="Votre ville" [(ngModel)]="ville" class="form-control">
+        </div>
+        <button type="button" (click)="getCountry()" class="btn btn-primary">Weather</button>
+        <button type="button" (click)="getWeather()" class="btn btn-primary">Submit</button>
+    </div>
+    <div>
+        <div class="col-md-12">
+            <h3 class="text-center my-4" style="text-align: center">Weather Details</h3>
+            <table class="table table-striped">
+                <tr>
+                    <td>Temperature : </td>
+                    <td>{{this.appService.weather["current"]["temperature"]}}</td>
+                </tr>
+                <tr>
+                    <td>Pays : </td>
+                    <td>{{this.appService.weather["location"]["country"]}}</td>
+                </tr>
+                <tr>
+                    <td>Ville : </td>
+                    <td>{{this.appService.weather["location"]["name"]}}</td>
+                </tr>
+                <tr>
+                    <td>observation_time : </td>
+                    <td>{{this.appService.weather["current"]["observation_time"]}}</td>
+                </tr>
+                <tr>
+                    <td>localtime : </td>
+                    <td>{{this.appService.weather["location"]["localtime"]}}</td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+</div>
