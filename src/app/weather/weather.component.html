@@ -10,10 +10,10 @@
             </div>-->
         <div class="form-group">
             <label>Ville : </label>
-            <input type="text"  [(ngModel)]="ville" class="form-control">
+            <input type="text" [(ngModel)]="ville" class="form-control">
             <!-- {{this.appService.city}} -->
         </div>
-        <button type="button" (click)="getCountry()" class="btn btn-primary">Weather</button>        
+        <button type="button" (click)="getCountry()" class="btn btn-primary">Weather</button>
     </div>
     <div>
         <div class="col-md-12">
@@ -21,23 +21,23 @@
             <table class="table table-striped">
                 <tr>
                     <td>Temperature : </td>
-                    <td>{{this.appService.weather["current"]["temperature"]}}</td>
+                    <td>{{appService?.weather?.current?.temperature}}</td>
                 </tr>
                 <tr>
                     <td>Pays : </td>
-                    <td>{{this.appService.weather["location"]["country"]}}</td>
+                    <td>{{appService?.weather?.location?.country}}</td>
                 </tr>
                 <tr>
                     <td>Ville : </td>
-                    <td>{{this.appService.weather["location"]["name"]}}</td>
+                    <td>{{appService?.weather?.location?.name}}</td>
                 </tr>
                 <tr>
                     <td>observation_time : </td>
-                    <td>{{this.appService.weather["current"]["observation_time"]}}</td>
+                    <td>{{appService?.weather?.current?.observation_time}}</td>
                 </tr>
                 <tr>
                     <td>localtime : </td>
-                    <td>{{this.appService.weather["location"]["localtime"]}}</td>
+                    <td>{{appService?.weather?.location?.localtime}}</td>
                 </tr>
             </table>
         </div>
